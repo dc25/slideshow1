@@ -1,19 +1,19 @@
 'use strict';
 
-/*eslint-disable no-console*/
-
-var fs   = require('fs');
-var path = require('path');
-var util = require('util');
-var yaml = require('js-yaml');
+const util = require('util');
+require('isomorphic-fetch');
 
 
-try {
-  var filename = path.join(__dirname, 'sample_document.yml'),
-      contents = fs.readFileSync(filename, 'utf8'),
-      data     = yaml.load(contents);
+async function toplev() {
+    try {
+      const resp = await fetch("https://raw.githubusercontent.com/dc25/sl/main/sample_document.yml");
+      const data = await resp.text();
 
-  console.log(util.inspect(data, false, 10, true));
-} catch (err) {
-  console.log(err.stack || String(err));
+      console.log(util.inspect(data, false, 10, true));
+    } catch (err) {
+      console.log(err.stack || String(err));
+    }
 }
+
+
+toplev();
