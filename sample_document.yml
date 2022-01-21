@@ -1,0 +1,8 @@
+---
+
+root:
+    'xxxx'
+
+images: !!omap
+- x: Mark McGwire
+- y: Sammy Sosa
