@@ -1,6 +1,6 @@
 var yaml = require('js-yaml');
 
-export async function toplev(search: string) {
+export async function toplev(search: string, setHtmlCallback : (html:string) => any) {
     try {
       const params = new URLSearchParams(search);  
       const encodedUrl = params.get("slidesURL");  
@@ -13,10 +13,16 @@ export async function toplev(search: string) {
       const resp = await fetch(url);
       const contents = await resp.text();
       const data = await yaml.load(contents);
+      const root = data["root"] + "/";
+      const ins = data["images"].reduce(
+                                    (acc: string, slide : Object) => {
+                                      const ipath = root + Object.keys(slide)[0];
+                                      return acc + "<img src=\"" + ipath + "\" >" 
+                                    }
 
-      for (let i = 0; i < data["images"].length; i++) {
-          console.log(data["images"][i])
-      }
+                                    , "");
+      setHtmlCallback(ins);
+
     } catch (err) {
       console.log(err.stack || String(err));
     }

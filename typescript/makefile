@@ -1,4 +1,4 @@
-SOURCES= slideshow.ts 
+SOURCES= slidelist.ts 
 BUILD_DIR=js
 ASSETS_DIR=../assets/js
 JS=$(addprefix $(BUILD_DIR)/, $(SOURCES:.ts=.js))
