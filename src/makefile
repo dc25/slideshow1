@@ -1,13 +1,13 @@
-PUBLISH=../publish
+PUBLISH=../_site
 
 TS_INPUTS=show.ts slidelist.ts 
 NON_TS_INPUTS=index.html slideshow.css
 
-JS_OUTPUT=$(addprefix $(PUBLISH)/, slideshow.js)
-NON_TS_OUTPUTS=$(addprefix $(PUBLISH)/, $(NON_TS_INPUTS))
-
 JS_WORK_DIR=js
 JS_WORK=$(addprefix $(JS_WORK_DIR)/, $(TS_INPUTS:.ts=.js))
+
+JS_OUTPUT=$(addprefix $(PUBLISH)/, slideshow.js)
+NON_TS_OUTPUTS=$(addprefix $(PUBLISH)/, $(NON_TS_INPUTS))
 
 OUTPUTS=$(JS_OUTPUT) $(NON_TS_OUTPUTS)
 
