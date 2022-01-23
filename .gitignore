@@ -1,6 +1,6 @@
 *~
-publish/slideshow.js
-typescript/js/
-typescript/node_modules/
-typescript/package-lock.json
+publish
+src/js/
+src/node_modules/
+src/package-lock.json
 
