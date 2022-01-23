@@ -17,7 +17,9 @@ $(JS_WORK_DIR)/%.js: %.ts
 	tsc -p .
         
 $(JS_OUTPUT): $(JS_WORK)
+	mkdir -p $(PUBLISH)
 	browserify -e $^ > $@
 
 $(PUBLISH)/%: %
+	mkdir -p $(PUBLISH)
 	cp $< $@
