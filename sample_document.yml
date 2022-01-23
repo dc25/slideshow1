@@ -1,9 +1,0 @@
-root:
-    'https://hopeful-neumann-0edaf5.netlify.app'
-
-images: !!omap
-    - IMG_3305.JPG: "aa"
-    - IMG_3348.JPG: "bb"
-    - IMG_3354.JPG: "cc"
-    - IMG_3372.JPG: "dd"
-    - IMG_3380.JPG: "ee"
