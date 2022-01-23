@@ -1,7 +1,6 @@
 {
   "devDependencies": {
     "@types/node": "^17.0.10",
-    "isomorphic-fetch": "^3.0.0",
     "js-yaml": "^4.1.0"
   }
 }

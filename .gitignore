@@ -1,8 +1,6 @@
 *~
-.*.swp
-.jekyll-cache/
-_site/
-assets/js
+publish/slideshow.js
 typescript/js/
 typescript/node_modules/
 typescript/package-lock.json
+

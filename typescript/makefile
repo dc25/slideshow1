@@ -1,8 +1,8 @@
 SOURCES=show.ts slidelist.ts 
 BUILD_DIR=js
-ASSETS_DIR=../assets/js
+ASSETS_DIR=../publish
 JS=$(addprefix $(BUILD_DIR)/, $(SOURCES:.ts=.js))
-JS_OUTPUT= $(ASSETS_DIR)/sls.js
+JS_OUTPUT= $(ASSETS_DIR)/slideshow.js
 
 default: $(JS_OUTPUT)
 
