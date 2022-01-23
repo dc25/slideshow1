@@ -1,0 +1,27 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/slideshow.css">
+  <meta charset="utf-8">
+  <script src="assets/js/sls.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Slider">
+      <div id="Arrows">
+        <i id="Prev" class="fa fa-chevron-left fa-2x" aria-hidden="true" onclick="updateCurrentImageIndex(-1)"></i>
+        <i id="Next" class="fa fa-chevron-right fa-2x" aria-hidden="true" onclick="updateCurrentImageIndex(1)"></i>
+      </div>
+    </div>
+	<script>
+
+	window.addEventListener('DOMContentLoaded', (event) => toplev(window.location.search, fillSlider) );
+
+	</script>
+
+</body>
+
+</html>
+
+
