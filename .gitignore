@@ -1,10 +1,7 @@
 *~
 .jekyll-cache/
-Gemfile
-Gemfile.lock
 _site/
 assets/js
-typescript/.makefile.un~
 typescript/js/
 typescript/node_modules/
 typescript/package-lock.json
