@@ -8,7 +8,7 @@ function fillSlider(evHTML: string) {
 
 function updateCurrentImageIndex(value: number) {
   const slider = document.querySelector('#Slider')
-  const images = slider.querySelectorAll('img')
+  const images = slider.querySelectorAll('figure')
   const maxImageIndex = images.length - 1
 
   currentImageIndex += value;

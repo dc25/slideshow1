@@ -17,7 +17,10 @@ export async function readSlides(search: string, setHtmlCallback : (html:string)
       const ins = data["images"].reduce(
                                     (acc: string, slide : Object) => {
                                       const ipath = root + Object.keys(slide)[0];
-                                      return acc + "<img src=\"" + ipath + "\" >" 
+                                      acc += "<figure>" ;
+                                      acc +=     "<img src=\"" + ipath + "\" >" ;
+                                      acc += "</figure>" ;
+                                      return acc;
                                     }
 
                                     , "");
