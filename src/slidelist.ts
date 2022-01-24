@@ -1,6 +1,6 @@
 var yaml = require('js-yaml');
 
-export async function toplev(search: string, setHtmlCallback : (html:string) => any) {
+export async function readSlides(search: string, setHtmlCallback : (html:string) => any) {
     try {
       const params = new URLSearchParams(search);  
       const encodedUrl = params.get("slidesURL");  
@@ -31,4 +31,4 @@ export async function toplev(search: string, setHtmlCallback : (html:string) => 
 // per: https://stackoverflow.com/questions/23296094/browserify-how-to-call-function-bundled-in-a-file-generated-through-browserify
 // and: https://stackoverflow.com/questions/12709074/how-do-you-explicitly-set-a-new-property-on-window-in-typescript
 
-(<any>window).toplev = toplev;
+(<any>window).readSlides = readSlides;
