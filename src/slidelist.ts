@@ -13,7 +13,10 @@ export async function readSlides(search: string, setHtmlCallback : (html:string)
       const resp = await fetch(url);
       const contents = await resp.text();
       const data = await yaml.load(contents);
-      const root = data["root"] + "/";
+
+      const re = new RegExp(/^.*\//);
+      const root = data.hasOwnProperty("root") ? data["root"] + "/" : re.exec(url);
+
       const ins = data["images"].reduce(
                                     (acc: string, slide : Object) => {
                                       const image = Object.keys(slide)[0];
@@ -25,7 +28,6 @@ export async function readSlides(search: string, setHtmlCallback : (html:string)
                                       acc += "</figure>" ;
                                       return acc;
                                     }
-
                                     , "");
       setHtmlCallback(ins);
 
