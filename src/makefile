@@ -1,6 +1,6 @@
 PUBLISH=../_site
 
-TS_INPUTS=show.ts slidelist.ts 
+TS_INPUTS=show.ts slidelist.ts swipe.ts
 NON_TS_INPUTS=index.html slideshow.css
 
 JS_WORK_DIR=js
