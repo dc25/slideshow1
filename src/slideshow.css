@@ -51,6 +51,8 @@ figcaption {
 }
 
 #Arrows {
+  font-size: 4.0rem;
+  font-weight: 900;
   display: flex;
   justify-content: space-between;
   position: absolute;

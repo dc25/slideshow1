@@ -1,14 +1,13 @@
 !!!
-%html{:dir => "ltr", :lang => "en"}
+%html{:lang => "en"}
   %head
-    %link{:crossorigin => "anonymous", :href => "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css", :integrity => "sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=", :rel => "stylesheet"}
-    %link{:href => "slideshow.css", :rel => "stylesheet"}
     %meta{:charset => "utf-8"}/
+    %link{:href => "slideshow.css", :rel => "stylesheet"}
     %script{:src => "slideshow.js", :type => "text/javascript"}
   %body
     #Slider
       #Arrows
-        %i#Prev.fa.fa-chevron-left.fa-2x{"aria-hidden" => "true", :onclick => "updateCurrentImageIndex(-1)"}
-        %i#Next.fa.fa-chevron-right.fa-2x{"aria-hidden" => "true", :onclick => "updateCurrentImageIndex(1)"}
+        %i#Prev{:onclick => "updateCurrentImageIndex(-1)"} &lt
+        %i#Next{:onclick => "updateCurrentImageIndex(1)"} &gt
     :javascript
       window.addEventListener('DOMContentLoaded', (event) => readSlides(window.location.search, fillSlider) );
