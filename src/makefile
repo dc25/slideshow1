@@ -20,7 +20,7 @@ $(JS_WORK_DIR)/%.js: %.ts
         
 $(JS_OUTPUT): $(JS_WORK)
 	mkdir -p $(PUBLISH)
-	browserify -e $^ > $@
+	browserify -e $^ | minify --out-file $@
 
 $(PUBLISH)/%.html: %.haml
 	mkdir -p $(PUBLISH)
