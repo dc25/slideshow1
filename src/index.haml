@@ -10,4 +10,4 @@
         %i#Prev{:onclick => "updateCurrentImageIndex(-1)"} &lt
         %i#Next{:onclick => "updateCurrentImageIndex(1)"} &gt
     :javascript
-      window.addEventListener('DOMContentLoaded', (event) => readSlides(window.location.search, fillSlider) );
+      window.addEventListener('DOMContentLoaded', event => readSlides(window.location.search, fillSlider) );
