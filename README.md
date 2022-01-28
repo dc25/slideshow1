@@ -2,7 +2,7 @@
     slideshow1
 
 # SYNOPSIS
-    Read a yaml file containing a list of images and captions. Present those images as a browser friendly slideshow.
+Read a yaml file containing a list of images and captions. Present those images as a browser friendly slideshow.
 
 # BUILDING
 ## Setup
@@ -29,14 +29,12 @@ Create an index (yaml) file containing a list of images and captions as in the f
 
 ```yaml
 root:
-    'https://hopeful-neumann-0edaf5.netlify.app'
+    'https://dc25.github.io/slideshow1'
 
 images: !!omap
-    - IMG_3305.JPG: "aa"
-    - IMG_3348.JPG: "bb"
-    - IMG_3354.JPG: "cc"
-    - IMG_3372.JPG: "dd"
-    - IMG_3380.JPG: "ee"
+ - 20190503_070718.jpg: "R.I.P. Chewbacca"
+ - 20190714_073604.jpg: "Don't look up."
+ - IMG_20190905_155441.jpg: "Why is this here?"
 ```
 Publicly serve the index file and the images.   If no root is specified in the yaml file, the images are expected to be found in the same place as the yaml file.  Otherwise, the images can be served from "root".
 
