@@ -7,16 +7,18 @@ Read a yaml file containing a list of images and captions. Present those images 
 # BUILDING
 ## Setup
 ```bash
+npm install -g typescript
 npm install -g browserify
 npm install -g babel-minify
 gem install haml
 git clone <this repository>
 cd <this repository>
+cd src
+npm i --save-dev @types/node
 ``` 
 
 ## Build
 ```bash
-cd src
 make
 ```
 
@@ -29,7 +31,7 @@ Create an index (yaml) file containing a list of images and captions as in the f
 
 ```yaml
 root:
-    'https://dc25.github.io/slideshow1'
+    'https://dc25.github.io/sample_slides'
 
 images: !!omap
  - 20190503_070718.jpg: "R.I.P. Chewbacca"
