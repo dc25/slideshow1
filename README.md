@@ -46,3 +46,11 @@ Access the index file as paraameter "slidesURL" .
 https://dc25.github.io/slideshow1/?slidesURL=https%3A%2F%2Fdc25.github.io%2Fsample_slides%2Fslides.yml
 
 
+# THANKS
+
+For the most part this project is an assembly of bits and pieces found online.  In particular :
+
+* The slideshow technique came from this stackoverflow answer: https://stackoverflow.com/a/61435418/509928
+* The code for swiping left and right on mobile devices came from this stackoverflow answer:  https://stackoverflow.com/a/23230280/509928
+
+
